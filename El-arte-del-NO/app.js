@@ -161,3 +161,10 @@ const loadPhrase = async () => {
 nextPhraseBtn.addEventListener('click', loadPhrase);
 startNoRain();
 loadPhrase();
+
+//copiar frase al portapapeles
+phraseEl.addEventListener('click', () => {
+    navigator.clipboard.writeText(phraseEl.textContent);
+
+    statusEl.textContent = 'Frase copiada al portapapeles';
+});
